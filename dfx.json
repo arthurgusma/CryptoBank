@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "CryptoBank": {
+      "main": "src/CryptoBank/main.mo",
+      "type": "motoko"
+    },
+    "CryptoBank_assets": {
+      "dependencies": [
+        "CryptoBank"
+      ],
+      "frontend": {
+        "entrypoint": "src/CryptoBank_assets/src/index.html"
+      },
+      "source": [
+        "src/CryptoBank_assets/assets",
+        "dist/CryptoBank_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
